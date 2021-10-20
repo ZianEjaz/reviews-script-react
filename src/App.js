@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-import Json from './reviews.json'
-import TextEditor from './components/textEditor'
 import prettier from "prettier/standalone";
 import babylon from "prettier/parser-babel";
+import MyEditor from "./components/sunEditor";
 
 
 
@@ -191,9 +190,14 @@ class App extends Component{
 
   state = {
     html : this.html,
-    formattedCode : ""
+    formattedCode : this.html,
   }
+  
 
+  formatCode = ()=>prettier.format(`<>${this.state.html}</>`, {
+    parser: "babel",
+    plugins: [babylon]
+  })
 
 
   updateChanges = (changes)=>{
@@ -209,15 +213,8 @@ this.setState({
 
   render(){
     return(
-    <div>
-      <div>
-      < TextEditor html = {this.state.html} updateChanges = {this.updateChanges} formatCode ={this.formatCode}/>
-      </div>
-      <div style={{ width: '50%', height: '300px', margin :'3em auto', padding : '3em' }}>
-
-      </div>
-      <textarea style={{ width: '50%', height: '300px', margin :'auto' }} value={this.state.formattedCode}></textarea>
-      
+    <div style={{ width: '50%', height: '300px', margin :'3em auto', padding : '3em' }}>
+      < MyEditor html ={this.state.html} />
     </div>
 
 )}
