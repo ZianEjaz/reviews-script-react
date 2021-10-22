@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import NavBar from './components/navBar'
 import CopyButton from "./copyButton";
 import GenerateHtml from './components/generateHtml'
 
@@ -31,7 +32,7 @@ class App extends Component{
 
 
   render(){
-    return(
+    return(<div>< NavBar />
     <div style={{ width: '50%', height: '300px', margin :'3em auto', padding : '3em' }}>
       < CopyButton text={this.state.html}/>
       < GenerateHtml 
@@ -43,7 +44,7 @@ class App extends Component{
      
       
     </div>
-
+    </div>
 )}
 };
 
