@@ -47,9 +47,9 @@ const finalHtml = newArray.map((obj, index)=>{
     return obj.html;
   }).join("")
 
-useEffect(()=>{
-    props.getHtml(finalHtml)
-}, [])
+// useEffect(()=>{
+//     props.getHtml(finalHtml)
+// }, [])
   return (
 <div>
 

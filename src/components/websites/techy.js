@@ -1,11 +1,12 @@
-import React from 'react'
+import React from "react";
+import GenerateHtml from "../generateHtml";
 
 const Techy = () => {
-    return (
-        <div>
-            
-        </div>
-    )
-}
+  return (
+    <div>
+      <GenerateHtml reviewsColor="green" styles=" " />
+    </div>
+  );
+};
 
-export default Techy
+export default Techy;
