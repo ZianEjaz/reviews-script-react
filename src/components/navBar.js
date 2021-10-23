@@ -14,28 +14,28 @@ const NavBar = () => {
       <div>
         <nav >
           <ul className="flex flex-wrap p-3 mx-auto align-center justify-center">
-            <li className=" m-3 bg-purple-500 hover:bg-purple-400 text-white font-bold py-2 px-4 border-b-4 border-purple-700 hover:border-purple-500 rounded" >
-              <Link to="/">HOME</Link>
-            </li>
-            <li className=" m-3 bg-purple-500 hover:bg-purple-400 text-white font-bold py-2 px-4 border-b-4 border-purple-700 hover:border-purple-500 rounded" >
-              <Link to="/selonline">SELONLINE</Link>
-            </li>
-            <li className=" m-3 bg-purple-500 hover:bg-purple-400 text-white font-bold py-2 px-4 border-b-4 border-purple-700 hover:border-purple-500 rounded" >
-              <Link to="/wilco">WILCO</Link>
-            </li>
-            <li className=" m-3 bg-purple-500 hover:bg-purple-400 text-white font-bold py-2 px-4 border-b-4 border-purple-700 hover:border-purple-500 rounded" >
-              <Link to="/robit">ROB IT</Link>
-            </li>
-            <li className=" m-3 bg-purple-500 hover:bg-purple-400 text-white font-bold py-2 px-4 border-b-4 border-purple-700 hover:border-purple-500 rounded" >
-              <Link to="/buckley">BUCKLEY</Link>
-            </li>
-            <li className=" m-3 bg-purple-500 hover:bg-purple-400 text-white font-bold py-2 px-4 border-b-4 border-purple-700 hover:border-purple-500 rounded" >
-              <Link to="/dgh">DGH</Link>
-            </li>
+          <Link to="/"><li className=" m-3 bg-purple-500 hover:bg-purple-400 text-white font-bold py-2 px-4 border-b-4 border-purple-700 hover:border-purple-500 rounded" >
+              Home
+            </li></Link>
+            <Link to="/selonline">   <li className=" m-3 bg-purple-500 hover:bg-purple-400 text-white font-bold py-2 px-4 border-b-4 border-purple-700 hover:border-purple-500 rounded" >
+             SELONLINE
+            </li></Link>
+            <Link to="/wilco">  <li className=" m-3 bg-purple-500 hover:bg-purple-400 text-white font-bold py-2 px-4 border-b-4 border-purple-700 hover:border-purple-500 rounded" >
+              WILCO
+            </li></Link>
+            <Link to="/robit"> <li className=" m-3 bg-purple-500 hover:bg-purple-400 text-white font-bold py-2 px-4 border-b-4 border-purple-700 hover:border-purple-500 rounded" >
+             ROB IT
+            </li></Link>
+            <Link to="/buckley"> <li className=" m-3 bg-purple-500 hover:bg-purple-400 text-white font-bold py-2 px-4 border-b-4 border-purple-700 hover:border-purple-500 rounded" >
+             BUCKLEY
+            </li></Link>
+            <Link to="/dgh"> <li className=" m-3 bg-purple-500 hover:bg-purple-400 text-white font-bold py-2 px-4 border-b-4 border-purple-700 hover:border-purple-500 rounded" >
+              DGH
+            </li></Link>
 
-            <li className=" m-3 bg-purple-500 hover:bg-purple-400 text-white font-bold py-2 px-4 border-b-4 border-purple-700 hover:border-purple-500 rounded" >
-              <Link to="/techy">TECHY</Link>
-            </li>
+            <Link to="/techy"><li className=" m-3 bg-purple-500 hover:bg-purple-400 text-white font-bold py-2 px-4 border-b-4 border-purple-700 hover:border-purple-500 rounded" >
+              TECHY
+            </li></Link>
           </ul>
         </nav>
 
