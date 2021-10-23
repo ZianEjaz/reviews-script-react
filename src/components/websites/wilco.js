@@ -7,6 +7,7 @@ const Wilco = () => {
             < GenerateHtml 
             reviewsColor= "#30a948"
             styles=" "
+            displayingHtmlFor = "Wilco"
             />
         </div>
     )

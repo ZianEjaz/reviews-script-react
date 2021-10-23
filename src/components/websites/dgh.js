@@ -5,8 +5,9 @@ const Dgh = () => {
     return (
         <div>
             < GenerateHtml 
-            reviewsColor= "green"
+            reviewsColor= "#f15a24"
             styles=" "
+            displayingHtmlFor = "Dgh"
             />
         </div>
     )

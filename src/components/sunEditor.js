@@ -8,8 +8,9 @@ const MyEditor = (props) => {
     <div style={{ width: "100%", height: "500px", margin: "auto" }}>
       <SunEditor 
       defaultValue={props.html} 
-      height="50vh" 
-      onChange={props.onChange}/>
+      height="60vh" 
+      onChange={props.onChange}
+      />
     </div>
   );
 };

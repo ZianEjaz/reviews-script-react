@@ -4,7 +4,10 @@ import GenerateHtml from "../generateHtml";
 const Techy = () => {
   return (
     <div>
-      <GenerateHtml reviewsColor="green" styles=" " />
+      <GenerateHtml reviewsColor="#000000"
+       styles=" "
+       displayingHtmlFor = "Techy Guys"
+        />
     </div>
   );
 };

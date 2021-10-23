@@ -5,8 +5,9 @@ const Robit = () => {
     return (
         <div>
             < GenerateHtml 
-            reviewsColor= "green"
+            reviewsColor= "#000000"
             styles=" "
+            displayingHtmlFor = "Rob It"
             />
         </div>
         

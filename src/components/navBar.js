@@ -12,28 +12,28 @@ const NavBar = () => {
   return (
     <Router>
       <div>
-        <nav>
-          <ul>
-            <li>
+        <nav >
+          <ul className="flex flex-wrap p-3 mx-auto align-center justify-center">
+            <li className=" m-3 bg-purple-500 hover:bg-purple-400 text-white font-bold py-2 px-4 border-b-4 border-purple-700 hover:border-purple-500 rounded" >
               <Link to="/">HOME</Link>
             </li>
-            <li>
+            <li className=" m-3 bg-purple-500 hover:bg-purple-400 text-white font-bold py-2 px-4 border-b-4 border-purple-700 hover:border-purple-500 rounded" >
               <Link to="/selonline">SELONLINE</Link>
             </li>
-            <li>
+            <li className=" m-3 bg-purple-500 hover:bg-purple-400 text-white font-bold py-2 px-4 border-b-4 border-purple-700 hover:border-purple-500 rounded" >
               <Link to="/wilco">WILCO</Link>
             </li>
-            <li>
+            <li className=" m-3 bg-purple-500 hover:bg-purple-400 text-white font-bold py-2 px-4 border-b-4 border-purple-700 hover:border-purple-500 rounded" >
               <Link to="/robit">ROB IT</Link>
             </li>
-            <li>
+            <li className=" m-3 bg-purple-500 hover:bg-purple-400 text-white font-bold py-2 px-4 border-b-4 border-purple-700 hover:border-purple-500 rounded" >
               <Link to="/buckley">BUCKLEY</Link>
             </li>
-            <li>
+            <li className=" m-3 bg-purple-500 hover:bg-purple-400 text-white font-bold py-2 px-4 border-b-4 border-purple-700 hover:border-purple-500 rounded" >
               <Link to="/dgh">DGH</Link>
             </li>
 
-            <li>
+            <li className=" m-3 bg-purple-500 hover:bg-purple-400 text-white font-bold py-2 px-4 border-b-4 border-purple-700 hover:border-purple-500 rounded" >
               <Link to="/techy">TECHY</Link>
             </li>
           </ul>

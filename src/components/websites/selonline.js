@@ -7,6 +7,7 @@ const Selonline = () => {
             < GenerateHtml 
             reviewsColor= "#30a948"
             styles=" "
+            displayingHtmlFor = "Selonline"
             />
         </div>
     )
