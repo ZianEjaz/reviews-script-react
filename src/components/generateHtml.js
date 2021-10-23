@@ -1,33 +1,35 @@
-import React, { useEffect} from "react";
+import React,{useState, useEffect} from "react";
 import Json from "../reviews.json";
 import MyEditor from "./sunEditor";
+import CopyButton from './copyButton';
+
+// functions
+// setting current date
+var myPastDate = new Date(new Date());
+//shuffling Json data everytime
+const shuffledData = Json.sort(() => Math.random() - 0.5);
+//setting date for 3 reviews
+const newArray = shuffledData.map((obj, index) => {
+  if (index % 3 === 0) {
+    myPastDate.setDate(myPastDate.getDate() - 1);
+    obj.date = myPastDate;
+  }
+  var dt = myPastDate;
+  var mm = dt.getMonth() + 1;
+  var dd = dt.getDate();
+  var yyyy = dt.getFullYear();
+  obj.date = dd + "/" + mm + "/" + yyyy;
+  return obj;
+});
 
 const GenerateHtml = (props) => {
+
+  const [html, updateState] = useState('');
+
+
 //getting dynamic data from parent state
 const reviewsColor = props.reviewsColor;
 const styles = props.styles;
-
-
-
-
-
-  // setting current date
-  var myPastDate = new Date(new Date());
-  //shuffling Json data everytime
-  const shuffledData = Json.sort(() => Math.random() - 0.5);
-  //setting date for 3 reviews
-  const newArray = shuffledData.map((obj, index) => {
-    if (index % 3 === 0) {
-      myPastDate.setDate(myPastDate.getDate() - 1);
-      obj.date = myPastDate;
-    }
-    var dt = myPastDate;
-    var mm = dt.getMonth() + 1;
-    var dd = dt.getDate();
-    var yyyy = dt.getFullYear();
-    obj.date = dd + "/" + mm + "/" + yyyy;
-    return obj;
-  });
 
 // generating final html with dynamic data
 const finalHtml = newArray.map((obj, index)=>{
@@ -46,15 +48,21 @@ const finalHtml = newArray.map((obj, index)=>{
     }
     return obj.html;
   }).join("")
+  
+useEffect(()=>{
+  updateState(finalHtml)
+}, [])
 
-// useEffect(()=>{
-//     props.getHtml(finalHtml)
-// }, [])
   return (
-<div>
-
+<div className="w-4/5 md:w-6/12 mx-auto bg-gray-600">
+  <div className="flex flex-wrap">
+< CopyButton text ={html}/>
+<h3 className="text-xl text-white m-auto">Displaying Html For <span className="{``}">{props.displayingHtmlFor}</span> </h3>
+</div>
 < MyEditor html ={finalHtml}
- onChange={props.sendHtmlToState}/>
+
+ onChange={updateState}
+ />
 </div>
   );
 };
