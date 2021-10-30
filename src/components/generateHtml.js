@@ -4,13 +4,20 @@ import MyEditor from "./sunEditor";
 import CopyButton from "./copyButton";
 import { Animated } from "react-animated-css";
 
-// functions
+
+
+const GenerateHtml = (props) => {
+  const [html, updateState] = useState("");
+
+
+
+  // functions
 // setting current date
 var myPastDate = new Date(new Date());
 //shuffling Json data everytime
 const shuffledData = Json.sort(() => Math.random() - 0.5);
 //setting date for 3 reviews
-const newArray = shuffledData.map((obj, index) => {
+const finalArrayData = shuffledData.map((obj, index) => {
   if (index % 3 === 0) {
     myPastDate.setDate(myPastDate.getDate() - 1);
     obj.date = myPastDate;
@@ -23,16 +30,12 @@ const newArray = shuffledData.map((obj, index) => {
   return obj;
 });
 
-const GenerateHtml = (props) => {
-  const [html, updateState] = useState("");
-
   //getting dynamic data from parent state
   const reviewsColor = props.reviewsColor;
   const styles = props.styles;
 
   // generating final html with dynamic data
-  const finalHtml = newArray
-    .map((obj, index) => {
+  const finalHtml = finalArrayData.map((obj, index) => {
       //setting left align to one review
       if (index % 2 === 0) {
         obj.html = `<div align="left" style="${styles} text-align: left;">
