@@ -7,12 +7,14 @@ import Selonline from "./websites/selonline";
 import Robit from "./websites/robit";
 import Dgh from "./websites/dgh";
 import Buckley from "./websites/buckley";
+import {Animated} from "react-animated-css";
 
 const NavBar = () => {
   return (
     <Router>
       <div>
         <nav >
+        <Animated animationIn="bounceInLeft" animationOut="fadeOut" isVisible={true}>
           <ul className="flex flex-wrap p-3 mx-auto align-center justify-center">
           <Link to="/"><li className=" m-3 bg-purple-500 hover:bg-purple-400 text-white font-bold py-2 px-4 border-b-4 border-purple-700 hover:border-purple-500 rounded" >
               Home
@@ -37,6 +39,7 @@ const NavBar = () => {
               TECHY
             </li></Link>
           </ul>
+          </Animated>
         </nav>
 
         {/* A <Switch> looks through its children <Route>s and

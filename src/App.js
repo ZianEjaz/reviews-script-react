@@ -6,7 +6,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className=".w-10/12 flex flex-wrap bg-gray-200">
+      <div className="w-full flex flex-wrap bg-gray-200 justify-center">
         <NavBar />
         
       </div>
