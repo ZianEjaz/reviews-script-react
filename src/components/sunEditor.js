@@ -7,7 +7,7 @@ const MyEditor = (props) => {
 
   return (
     <div className="w-screen min-w-full " style={{  height: "500px", margin: "auto" }}>
-      <Animated animationIn="fadeInUpBig" animationOut="fadeOut" isVisible={true}>
+      <Animated animationIn="animate__fadeInUpBig" animationOut="animate__fadeOut" isVisible={true}>
       <SunEditor 
       defaultValue={props.html} 
       height="60vh" 

@@ -6,7 +6,7 @@ const Buckley = () => {
         <div>
             < GenerateHtml 
             reviewsColor= "#f69062"
-            styles=" "
+            styles="max-width: 70%; "
             displayingHtmlFor = "Buckley"
             />
         </div>
