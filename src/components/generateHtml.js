@@ -33,7 +33,7 @@ const GenerateHtml = (props) => {
   // generating final html with dynamic data
   const finalHtml = finalArrayData
     .map((obj, index) => {
-      if (props.displayingHtmlFor === "Buckley") {
+      if (props.displayingHtmlFor === "Buckley" || "Celeron") {
         //setting left align to one review
         if (index % 2 === 0) {
           obj.html = `<!-- left -->
@@ -124,7 +124,7 @@ const GenerateHtml = (props) => {
 
   useEffect(() => {
     updateState(
-      props.displayingHtmlFor === "Buckley" ? buckleyHtml : finalHtml
+      props.displayingHtmlFor === "Buckley" || "Celeron"? buckleyHtml : finalHtml
     );
   }, []);
 
@@ -146,7 +146,7 @@ const GenerateHtml = (props) => {
           < CopyButton text={html} />{" "}
         </div> {" "}
       </div>
-      < MyEditor html={props.displayingHtmlFor === "Buckley" ? buckleyHtml : finalHtml} onChange={updateState} />{" "} {console.log(buckleyHtml)} {" "}
+      < MyEditor html={props.displayingHtmlFor === "Buckley" || "Celeron" ? buckleyHtml : finalHtml} onChange={updateState} />{" "} {console.log(buckleyHtml)} {" "}
     </div>
    </Animated>
   );

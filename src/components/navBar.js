@@ -7,6 +7,7 @@ import Selonline from "./websites/selonline";
 import Robit from "./websites/robit";
 import Dgh from "./websites/dgh";
 import Buckley from "./websites/buckley";
+import Celeron from "./websites/celeron";
 import {Animated} from "react-animated-css";
 
 const NavBar = () => {
@@ -38,6 +39,9 @@ const NavBar = () => {
             <Link to="/techy"><li className=" m-3 bg-purple-500 hover:bg-purple-400 text-white font-bold py-2 px-4 border-b-4 border-purple-700 hover:border-purple-500 rounded" >
               TECHY
             </li></Link>
+            <Link to="/celeron"><li className=" m-3 bg-purple-500 hover:bg-purple-400 text-white font-bold py-2 px-4 border-b-4 border-purple-700 hover:border-purple-500 rounded" >
+              CELERON
+            </li></Link>
           </ul>
           </Animated>
         </nav>
@@ -45,6 +49,9 @@ const NavBar = () => {
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
+        <Route path="/celeron">
+            <Celeron />
+          </Route>
           <Route path="/selonline">
             <Selonline />
           </Route>
